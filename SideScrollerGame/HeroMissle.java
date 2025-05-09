@@ -4,6 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class HeroMissle extends Actor
 {
     public HeroMissle(int rot){
+        Greenfoot.playSound("launch.wav");
         setRotation(rot);
     }
     
