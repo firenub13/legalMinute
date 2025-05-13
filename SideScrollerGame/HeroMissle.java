@@ -12,6 +12,5 @@ public class HeroMissle extends Actor
     public void act()
     {
         move(10);
-        
     }
 }

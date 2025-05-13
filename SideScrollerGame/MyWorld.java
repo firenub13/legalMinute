@@ -27,9 +27,9 @@ public class MyWorld extends World
         anthem.play();
         
         if (droneCooldown<1){
-            droneCooldown = 50;
+            droneCooldown = 100;
             lastDroneX+= Greenfoot.getRandomNumber(2000)+200;
-            addObject(new gerome(), lastDroneX, Greenfoot.getRandomNumber(700)+100);
+            addObject(new gerome(), lastDroneX, Greenfoot.getRandomNumber(700));
         }
         droneCooldown--;
         

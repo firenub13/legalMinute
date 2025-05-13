@@ -53,5 +53,8 @@ public class Hero extends Actor
                 cooldown = 15;
             }
     }
+        if(isTouching(gerome.class)){
+            getWorld().removeObject(this);
+        }
 }
 }

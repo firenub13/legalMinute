@@ -13,9 +13,22 @@ public class gerome extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int droneX = MyWorld.lastDroneX;
+    int dead = 0;
+    int dieCooldown = 0;
     public void act()
     {
         // Add your action code here.
-        setLocation(droneX- MyWorld.X, getY());
+        if (isTouching(HeroMissle.class)){
+            dead = 1;
+            dieCooldown = 1;
+        }
+        if (dead == 0){
+            setLocation(droneX- MyWorld.X, getY());
+        }else{
+            dieCooldown--;
+            if(dieCooldown<1){
+                getWorld().removeObject(this);
+        }
+        }
     }
 }
